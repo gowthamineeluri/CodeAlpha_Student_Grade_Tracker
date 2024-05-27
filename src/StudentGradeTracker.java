@@ -30,10 +30,13 @@ public class StudentGradeTracker {
         try {
 
             noOfStudents = scanner.nextInt();
+            if(noOfStudents <=0) {
+            	throw new RuntimeException();
+            }
 
         } catch (Exception e) {
 
-            System.out.println("Should be in numbers only");
+            System.out.println("Should be in positive numbers only");
 
             take_no_of_students();
         }
